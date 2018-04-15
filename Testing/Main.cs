@@ -18,7 +18,6 @@ namespace Testing
         public Main()
         {
             InitializeComponent();
-            Database.SetInitializer(new DropCreateDatabaseAlways<TestContext>());
         }
 
         private void button1_Click(object sender, EventArgs e)
