@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.Entity;
 using Testing.Models;
 using Testing.DataAccess;
 
@@ -17,14 +18,19 @@ namespace Testing
         public Main()
         {
             InitializeComponent();
+            Database.SetInitializer(new DropCreateDatabaseAlways<TestContext>());
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var colleges = new List<College>
+            College college = new College
             {
-                new College { Title }
-            }
+                Title = textBox1.Text,
+                City = textBox2.Text
+            };
+            var context = new TestContext();
+            context.Colleges.Add(college);
+            context.SaveChanges();
         }
     }
 }
