@@ -21,10 +21,5 @@ namespace Testing
         {
             Application.Exit();
         }
-
-        private void oklogin_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
