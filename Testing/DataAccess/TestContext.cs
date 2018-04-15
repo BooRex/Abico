@@ -15,5 +15,6 @@ namespace Testing.DataAccess
         public DbSet<Subject> Subjects { get; set; }
         public DbSet<Test> Tests { get; set; }
         public DbSet<Submission> Submissions { get; set; }
-        public DbSet<Admission> Admissions { get; set; }    }
+        public DbSet<Admission> Admissions { get; set; }
+    }
 }
